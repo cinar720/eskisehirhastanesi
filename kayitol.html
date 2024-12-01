@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol</title>
+    <link rel="stylesheet" href="kayitol.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="hastanelogo.jpg" alt="Hastane Yönetim Sistemi Logo">
+            <h1>Hastane Yönetim Sistemi</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="login.html">Giriş Yap</a></li>
+                <li><a href="kayitol.html" class="active">Kayıt Ol</a></li>
+                <li><a href="gizlilik-politikası.html">Gizlilik Politikası</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <form method="POST" action="kayitol.php" onsubmit="return validateForm()">
+        <label for="name">Ad Soyad:</label>
+        <input type="text" name="name" id="name" required><br><br>
+    
+        <label for="email">E-posta:</label>
+        <input type="email" name="email" id="email" required><br><br>
+    
+        <label for="password">Şifre:</label>
+        <input type="password" name="password" id="password" required><br><br>
+    
+        <label for="confirm-password">Şifreyi Onayla:</label>
+        <input type="password" name="confirm-password" id="confirm-password" required><br><br>
+    
+        <input type="submit" value="Kayıt Ol">
+    </form>
+    
+    <script>
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+            if (password !== confirmPassword) {
+                alert("Şifreler uyuşmuyor!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    
+
+</body>
+</html>

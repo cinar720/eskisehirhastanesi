@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "electron": "^33.2.1"
+  },
+  "dependencies": {
+    "webview": "^1.1.0"
+  }
+}
